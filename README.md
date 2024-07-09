@@ -104,6 +104,6 @@ The model may generate responses that are inaccurate, lack essential information
 This model has only been pretrained for 300B tokens, without any instruction tuning and safety alignment. We recommend you to continually pretrain, instruction tune and safety align it for your usecase.
 
 ## Misc
-* **License**: All models and code are released under Apache 2.0 License.
+* **License**: All these models are released under Apache 2.0 License and can be accessed via Huggingface.
 * We will use this GitHub repo for communication (including HF repo related queries). Feel free to open an issue.
 * Citation: Coming soon
