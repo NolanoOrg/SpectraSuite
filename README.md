@@ -51,7 +51,7 @@ You may check out ongoing works across various open source libraries:
 - https://github.com/ggerganov/llama.cpp/pull/8151
 - https://github.com/ridgerchu/matmulfreellm
 
-If you pack TriLMs into lower bitwidths, please take into account the Model Parallel (MP) size used to train - there may be `MP<=6` scales per weight matrix in TriLMs we release. This can be validated by the following code snippet.
+If you pack TriLM's linear layers into lower bitwidths, please take into account the Model Parallel (MP) size used to train - there may be `MP<=6` scales per weight matrix in TriLMs we release. This can be validated by the following code snippet.
 ```python
 import transformers as tf
 # Please select a TriLM model.
@@ -73,6 +73,8 @@ Following are the hyperparameters for FloatLMs and TriLMs.
 | 1.515B (1.5B) | 2048   | 6144 | 32    | 24     | 2  |
 | 2.461B (2.4B) | 2304   | 7680 | 36    | 30     | 3  |
 | 3.989B (3.9B) | 3072   | 9216 | 24    | 30     | 6  |
+
+You may additionally also need to account for other differences in modeling - no quantization for embedding, lm head and activation. TriLM has RMSNorm (with parameter like LLaMa, not the parameterless RMSNorm), SwiGLU Gated MLP, Rotary Position Embedding (RoPE), Multi-Headed Attention and no bias terms. Generally take any LLaMa implementation, and switch its linear layers to our TriLM's linear layer.
 
 Feel free to open a GH issue if you have any questions here.
 
