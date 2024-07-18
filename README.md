@@ -103,7 +103,21 @@ The model may generate responses that are inaccurate, lack essential information
 
 This model has only been pretrained for 300B tokens, without any instruction tuning and safety alignment. We recommend you to continually pretrain, instruction tune and safety align it for your usecase.
 
+## Citation
+If you find these models or the associated paper useful, please cite the paper:
+
+```bibtex
+@misc{kaushal2024spectracomprehensivestudyternary,
+      title={Spectra: A Comprehensive Study of Ternary, Quantized, and FP16 Language Models}, 
+      author={Ayush Kaushal and Tejas Pandey and Tejas Vaidhya and Aaryan Bhagat and Irina Rish},
+      year={2024},
+      eprint={2407.12327},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2407.12327}, 
+}
+```
+
 ## Misc
 * **License**: All these models are released under Apache 2.0 License and can be accessed via Huggingface.
 * We will use this GitHub repo for communication (including HF repo related queries). Feel free to open an issue.
-* Citation: Coming soon
